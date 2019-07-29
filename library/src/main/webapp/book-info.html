@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+<script type="text/javascript" src="bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="bootstrap3/js/respond.min.js"></script>
+</head>
+<style type="text/css">
+  body{
+    padding-top:50px;
+  }
+</style>
+<body>	
+<nav class="navbar navbar-default navbar-fixed-top">
+  <button class="btn btn-primary"><span class="glyphicon glyphicon-refresh"></span>&nbsp;刷新</button>
+  <button onclick="wAdd()" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>&nbsp;添加</button>
+  <button onclick="wDelete()" class="btn btn-primary"><span class="glyphicon glyphicon-minus"></span>&nbsp;删除</button>
+  <button onclick="wUpdate()" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>&nbsp;修改</button>
+  <button onclick="wSearch()"  class="btn btn-primary"><span class="glyphicon glyphicon glyphicon-search"></span>&nbsp;查询</button>
+  <input type="text" class="form-control-static bg-info">
+</nav>
+<table class="table table-striped table-bordered table-hover  table-condensed text-center">
+  <thead>
+     <th>序号</th>
+     <th>封面</th>
+     <th>图书名称</th>
+     <th>作者</th>
+     <th>出版社</th>
+     <th>书刊分类</th>
+     <th>总册数</th>
+     <th>借出册数</th>
+     <th>剩余册数</th>
+     <th>借出次数</th>
+     <th>书刊编号</th>
+  </thead>
+  <tbody>
+     <tr>
+     		<td ondblclick="ShowElement(this)">1</td>
+        <td class="thumbnail"><img width="100px" src="imgs/book_1.jpeg"/></td> 
+        <td>傲世仙医</td> 
+        <td>桥月仍在</td>
+        <td>起点中文网</td>
+        <td>武侠仙侠</td>
+        <td>35</td>
+        <td>20</td>
+        <td>15</td>
+        <td>345</td>
+        <td>wx001</td>
+     </tr>
+ <tr>
+       <td>2</td>
+        <td class="thumbnail"><img width="100px" src="imgs/book_2.jpeg"/></td> 
+        <td>拓道传</td> 
+        <td>华南老实人</td>
+        <td>起点中文网</td>
+        <td>武侠仙侠</td>
+        <td>45</td>
+        <td>30</td>
+        <td>15</td>
+        <td>375</td>
+        <td>wx002</td>
+     </tr>
+ <tr>
+       <td>3</td>
+        <td class="thumbnail"><img width="100px" src="imgs/book_3.jpeg"/></td> 
+        <td>平天策</td> 
+        <td>无罪</td>
+        <td>起点中文网</td>
+        <td>武侠仙侠</td>
+        <td>55</td>
+        <td>30</td>
+        <td>25</td>
+        <td>745</td>
+        <td>wx003</td>
+     </tr>
+  </tbody>
+</table>
+</body>
+
+<script type="text/javascript">
+
+function wUpdate(){  
+    window.open('update.html','_blank','width=700,height=550,left=800,top=300,menubar=no,toolbar=no,status=no,scrollbars=yes')  
+
+}   
+
+function wDelete(){  
+    window.open('delete.html','_blank','width=700,height=150,left=800,top=300,menubar=no,toolbar=no,status=no,scrollbars=yes')  
+
+}   
+
+function wSearch(){  
+    window.open('search.html','_blank','width=900,height=550,left=800,top=300,menubar=no,toolbar=no,status=no,scrollbars=yes')  
+
+}   
+
+function wAdd(){  
+    window.open('add.html','_blank','width=700,height=550,left=800,top=300,menubar=no,toolbar=no,status=no,scrollbars=yes')  
+
+}   
+
+function ShowElement(element) {
+    var oldhtml = element.innerHTML;
+    //创建新的input元素
+    var newobj = document.createElement('input');
+    //为新增元素添加类型
+    newobj.type = 'text';
+    //为新增元素添加value值
+    newobj.value = oldhtml;
+    //为新增元素添加光标离开事件
+    newobj.onblur = function() {
+      element.innerHTML = this.value == oldhtml ? oldhtml : this.value;
+      //当触发时判断新增元素值是否为空，为空则不修改，并返回原有值 
+    }
+    //设置该标签的子节点为空
+    element.innerHTML = '';
+    //添加该标签的子节点，input对象
+    element.appendChild(newobj);
+    //设置选择文本的内容或设置光标位置（两个参数：start,end；start为开始位置，end为结束位置；如果开始位置和结束位置相同则就是光标位置）
+    newobj.setSelectionRange(0, oldhtml.length);
+    //设置获得光标
+    newobj.focus();
+  } 
+  $("td").dblclick(function(){
+	  ShowElement(this); 
+  })
+</script>
+</html>

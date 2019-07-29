@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+<script type="text/javascript" src="bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="bootstrap3/js/respond.min.js"></script>
+<link rel="stylesheet" type="text/css" href="mycss/four.css" />
+</head>
+<body>
+  <!-- 内容输入 到footer中 -->
+  <footer>
+    <div>
+      <div class="way">
+        <select name="">
+          <option >请选择查询方式</option>
+          <option value="0">按日期查询</option>
+          <option value="1">按编号查询</option>
+          <option value="2">按名称查询</option>
+          <option value="3">按状态查询</option>
+        </select>
+      </div>
+      <div id="waybutton">
+        <div id="0">
+          <span class="text-info">开始：</span><input type="date"
+            readOnly=true><br> <span class="text-info">结束：</span><input
+            type="date" readOnly=true>
+        </div>
+        <div id="1">
+          <span class="text-info">编号：</span><input type="text"
+            readOnly=true>
+        </div>
+        <div id="2">
+          <span class="text-info">名称：</span><input type="text"
+            readOnly=true>
+        </div>
+        <div id="3">
+          <span class="text-info">状态：</span><input type="text"
+            readOnly=true>
+        </div>
+      </div>
+      <div id="true">
+        <button type="button" class="btn btn-success">确定查找</button>
+      </div>
+      <div class="back">
+        <table class="table table-hover">
+          <thead>
+            <th></th>
+            <th>书籍编号</th>
+            <th>书籍名称</th>
+            <th>借书日期</th>
+            <th>归还日期</th>
+            <th>书籍状态</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td>1001</td>
+              <td>人间六月天</td>
+              <td>2019-6-19 13:00:27</td>
+              <td>2019-7-15 12:00:27</td>
+              <td>已归还</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td>1002</td>
+              <td>边城</td>
+              <td>2019-6-19 13:00:27</td>
+              <td>2019-7-15 12:00:27</td>
+              <td>已归还</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td>1003</td>
+              <td>活着</td>
+              <td>2019-6-19 13:00:27</td>
+              <td>2019-7-15 12:00:27</td>
+              <td>已归还</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <nav>
+        <div id="page">
+          <ul class="pagination">
+            <li><a href="#" aria-label="Previous"> <span
+                aria-hidden="true">&laquo;</span>
+            </a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#" aria-label="Next"> <span
+                aria-hidden="true">&raquo;</span>
+            </a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </footer>
+  <!--功能 方法 -->
+  <script type="text/javascript">
+			$(function() {
+				$("tbody").hide();
+				$("select:first").change(function() {
+					$("tbody").hide();
+					$("#waybutton input").attr({
+						"readOnly" : "true"
+					});
+					$("#waybutton input").val(" ")
+					$("#waybutton input").attr("readOnly", true);
+					switch (this.value) {
+					case "0":
+						$("#0 input").attr("readOnly", false);
+						break;
+					case "1":
+						$("#1 input").attr("readOnly", false);
+						break;
+					case "2":
+						$("#2 input").attr("readOnly", false);
+						break;
+					case "3":
+						$("#3 input").attr("readOnly", false);
+						break;
+					}
+				})
+				$("#true").click(function() {
+					$("tbody").show();
+				})
+			})
+		</script>
+</body>
+</html>

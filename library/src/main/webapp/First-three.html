@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport"
+  content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css"
+  href="bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css"
+  href="bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
+<script type="text/javascript" src="bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="bootstrap3/js/respond.min.js"></script>
+</head>
+<!-- 内容输入 到footer中 -->
+<footer>
+  <div id="d1">
+    <div>
+      <button class="btn btn-primary btn">
+        <span class="glyphicon glyphicon-refresh"></span> 清屏
+      </button>
+    </div>
+    <div>
+      <button class="btn btn-primary btn">
+        <span class="	glyphicon glyphicon-save"></span> 借书
+      </button>
+      <button class="btn btn-primary btn">
+        <span class="	glyphicon glyphicon-open"></span> 还书
+      </button>
+      <button class="btn btn-primary btn">
+        <span class="	glyphicon glyphicon-saved"></span> 续借
+      </button>
+    </div>
+    <div>
+      <button class="btn btn-primary btn">
+        <span class="glyphicon glyphicon-th-list"></span> 自定义列
+      </button>
+      <button class="btn btn-primary btn">
+        <span class="	glyphicon glyphicon-print"></span> 打印
+      </button>
+      <button class="btn btn-primary btn">
+        <span class="glyphicon glyphicon-export"></span> 导出
+      </button>
+    </div>
+    <div>
+      <button class="btn btn-primary btn">
+        <span class="	glyphicon glyphicon-off"></span> 关闭
+      </button>
+    </div>
+  </div>
+  <div id="footbody" class="bg-info">
+    <div id="d2">
+      <div id="date">
+        <h4></h4>
+        <h2></h2>
+        <h3></h3>
+      </div>
+      <h1>借书</h1>
+    </div>
+
+    <div id="d3">
+      <div>
+      
+        <select name="book">
+          <option>请选择</option>
+          <option value="bookname">书刊名称</option>
+          <option value="bookcar" >书刊条码</option>
+          <option value="bookid" selected="selected">ISSN/ISBN</option>
+        </select> <input type="text" class="table_text_submit" name="find">
+        <input type="submit" value="搜索">
+          
+          
+   
+        <div class="table_div">
+          <span>书刊名称：</span> <input class="table_text" type="text"
+            readOnly>
+        </div>
+        <div class="table_div">
+          <span>书刊条码：</span> <input class="table_text" type="text"
+            readOnly>
+        </div>
+        <div class="table_div">
+          <span>ISSN/ISBN：</span> <input class="table_text" type="text"
+            readOnly >
+        </div>
+        <div class="table_div">
+          <span>书刊位置：</span> <input class="table_text" type="text"
+            readOnly >
+        </div>
+      </div>
+      <div>
+      <form action="Three_FindReaderServelt">
+        <select name="reader">
+          <option>请选择</option>
+          <option value="readername">读者姓名</option>
+          <option  value="readercarid" selected="selected">证卡编号</option>
+          <option value="readertype">读者类别</option>
+          <option value="readerid">身份证号</option>
+        </select> <input type="text" class="table_text_submit" name="finder" th:value="${r.readercarid}"> 
+        <input type="submit"value="搜索 ">
+          </form>
+          
+        <div class="table_div">
+          <span>读者姓名：</span> <input class="table_text" type="text"
+            readOnly th:value="${r.readername}">
+        </div>
+        <div class="table_div">
+          <span>证卡编号：</span> <input class="table_text" type="text"
+            readOnly th:value="${r.readercarid}">
+        </div>
+        <div class="table_div">
+          <span>读者类别：</span> <input class="table_text" type="text"
+            readOnly th:value="${r.readertype}">
+        </div>
+        <div class="table_div">
+          <span>身份证号：</span> <input class="table_text" type="text"
+            readOnly th:value="${r.readerid}">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn">
+        <span class="glyphicon glyphicon-save"><span>借书</span></span>
+      </button>
+    </div>
+
+  </div>
+  <div id="d4"></div>
+  <div id="d5" class="bg-info">
+    <table class="table table-hover">
+      <thead>
+        <th>借出日期</th>
+        <th>借出时间</th>
+        <th>书刊名称</th>
+        <th>藏管类型</th>
+        <th>书刊条码</th>
+        <th>读者姓名</th>
+        <th>读者编码</th>
+        <th>读者手机</th>
+        <th>读者类别</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2019/07/4</td>
+          <td>下午19：08</td>
+          <td>金瓶梅</td>
+          <td>哲学</td>
+          <td>16912586</td>
+          <td>苍老师</td>
+          <td>542515</td>
+          <td>3321345618541</td>
+          <td>vip</td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+</footer>
+<!--内容属性  -->
+<script type="text/javascript">
+/*footer内容  */
+	/*整体样式*/
+	$("#d1,#d2,#d3,#d4,#d5").css({"margin":"3px"})
+ /*第一部分  标签  */
+	$("#d1").css({"overflow":"hidden","background-image":"url('imgs/background1.jpg')","background-repeat":"no-repeat","background-size":"100% "})
+	$("#d1 div").css({"margin":"15px 5%","float":"left"})
+	$("#footbody").css({"width":"74%","height":"413px","float":"left"})
+/*第二部分  整体*/
+	$("#d2").css({"overflow":"hidden","width":"100%","margin":"30px" })
+	$("#d2>h1").css({"color":"black","text-align":"center","font-size":"70px"});
+ /*第二部分  日历*/
+	 $("#date").css({"float":"right","margin":"10px 50px","box-shadow":"rgba(0,0,0,0.2) 4px 4px 1px","background":"white"})
+	 $("#date>h2").css({"color":"red","margin":"2px 0","text-align":"center"});
+	 $("#date>h4").css({"color":"black","text-align":"center","margin":"2px 0"});
+	 $("#date>h3").css({"color":"black","text-align":"center","margin":"2px 0"});
+	 //第三部分
+	 $("#d3").css({"overflow":"hidden","width":"100%","text-align":"right"})
+//表格
+	 $("#d3>div").css({"float":"left","text-align":"right","margin":"0px 35px"})
+	 $(".table_text").css({"margin":"5px 0 ","height":"25px","border-bottom":"1px"})
+	 $(".table_div>span").css({"display":"inline-block","width":"80px"})
+	 $(".table_text_submit+a").css({"positon":"absolute","right":"30px"})
+	 $(".table_text_submit").css({"width":"190px","height":"30px","margin":"5px"})
+ //提交按钮
+	 $("#d3>button").css({"width":"80px","height":"160px","float":"left","margin":"4px"})
+	  $("#d3>button span").css("font-size","15px")
+  //头像
+	  $("#d4").css({"width":"295px","height":"413px","background-image":"url('imgs/man.jpg')"
+		 , "float":"left","margin":"0 5px"})
+	  //5
+	  $("#d5").css({"float":"left","width":"98%","height":"500px"})
+	  
+</script>
+
+<!--功能 方法 -->
+<script type="text/javascript">
+	$(function(){
+		/* 日历 */
+			var v=new Date()
+	var date1=v.toLocaleDateString();
+		var time=date1.split("/");
+			$("#date>h4:first").text(time[0]+"年0"+time[1]+"月");
+		
+			$("#date>h2").text("0"+time[2]);
+			var t=$("#date>h2").text().length;
+			if(t>2){
+				$("#date>h2").text(time[2]);
+			}
+			$("#date>h3:last").text("星期"+v.getDay());
+		$("table tr").each(function(){
+			　$(this).children('td').eq(2).css('color','red');})	
+		$("#d1>div:eq(1)").children().click(function(){
+			var a=$(this).text().trim();
+			var cla=$(this).children().attr("class");
+			$("#d2>h1").text(a);
+			$("#d3>button>span").attr("class",cla);
+			$("#d3>button span").text(a);	
+		})
+	})
+</script>
+</body>
+</html>

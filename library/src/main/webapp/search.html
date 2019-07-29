@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>查询</title>
+<link rel="stylesheet" type="text/css" href="bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+<script type="text/javascript" src="bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="bootstrap3/js/respond.min.js"></script>
+</head>
+<body>
+<span class="glyphicon glyphicon glyphicon-search"></span>
+<input type="text" placeholder="请输入要查询的元素......" size=100>
+<button class="btn btn-info btn-xs"'>查询</button>
+ <table class="table table-striped table-bordered table-hover  table-condensed text-center">
+  <thead>
+     <th>序号</th>
+     <th>封面</th>
+     <th>图书名称</th>
+     <th>作者</th>
+     <th>出版社</th>
+     <th>书刊分类</th>
+     <th>总册数</th>
+     <th>借出册数</th>
+     <th>剩余册数</th>
+     <th>借出次数</th>
+     <th>书刊编号</th>
+  </thead>
+  <tbody>
+     <tr>
+       <td ondblclick="ShowElement(this)">1</td>
+        <td class="thumbnail"><img width="100px" src="imgs/book_1.jpeg"/></td> 
+        <td>傲世仙医</td> 
+        <td>桥月仍在</td>
+        <td>起点中文网</td>
+        <td>武侠仙侠</td>
+        <td>35</td>
+        <td>20</td>
+        <td>15</td>
+        <td>345</td>
+        <td>wx001</td>
+     </tr>
+  </tbody>
+</table>
+</body>
+</html>

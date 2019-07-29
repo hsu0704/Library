@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>温州图书馆后台管理</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+<script type="text/javascript" src="bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="bootstrap3/js/respond.min.js"></script>
+<link rel="stylesheet" type="text/css" href="mycss/erp.css" />
+<style type="text/css">
+  article{
+    background:url("imgs/首页背景.png");
+    width:80%;
+    height:90px;
+    margin-bottom:10px;
+    float:left;
+    color:#000;
+  }
+
+    .toolbar-item-weixin {
+    background-position: 0 -798px;}
+    .toolbar-item-app {
+    background-position: 0 -550px;
+}
+.toolbar-item-top {
+    background-position: 0 -674px;
+} 
+ 
+  </style>
+</head>
+<body class="bg-primary">
+	<header>
+	<div id="logo">
+		<img src="imgs/LOGO.jpg" class="img-rounded">	
+	</div>
+	<div>
+		<ul class="list" >
+			<li><span class="glyphicon glyphicon-book"></span> 书刊管理
+				<ul>
+					<li><a href="book-info.html" target="main" >书刊信息维护</a></li>
+					<li><a href="publish-info.html" target="main">书刊信息查询</a></li>
+				</ul>
+			</li>
+			<li><span class="glyphicon glyphicon-user"></span> 读者管理
+				<ul>
+					<li><a href="#">读者信息维护</a></li>
+					<li><a href="#">读者类别设置</a></li>
+					<li><a href="#">节约规章制度</a></li>
+				</ul>
+			</li>
+			<li><span class="glyphicon glyphicon-pencil"></span> 借阅管理
+				<ul>
+					<li><a href="First-three.html" target="main">借书还书续借</a></li>
+					<li><a href="First-three2.html" target="main">借阅记录查询</a></li>
+				</ul>
+			</li>
+		
+			<li><span class="glyphicon glyphicon-check"></span> 查询统计
+				<ul>
+					<li><a href="First-four(one).html" target="main">借阅记录统计</a></li>
+					<li><a href="First-four(two).html" target="main">逾期记录查询</a></li>
+				</ul>
+			</li>
+			<li><span class="glyphicon glyphicon-cog"></span> 系统维护
+				<ul>
+					<li><a href="#">数字字典维护</a></li>
+					<li><a href="#">用户授权设置</a></li>
+					<li><a href="#">操作日志管理</a></li>
+					<li><a href="#">系统参数设置</a></li>
+					<li><a href="#">高级管理工具</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+    <div id="basic">
+      <p>
+      <span>电子邮件：danei@langyitech.com</span><br>
+         <span>公司地址：温州市鹿城区中通大厦</span><br>
+         <span>版权所有：<a href="#">达内股份有限公司</a></span> <br>
+         <p align="center">浙ICP备12032793号</p>
+      
+      </p>
+    </div>
+  
+  </header>
+	<article>
+    <div>
+		<input type="button" class="btn btn-danger" value="目录" ></input>
+			<span>欢迎到来后台服务系统  </span>
+      </div>
+		<div>
+			<button class="btn btn-primary btn">
+  			<span class="glyphicon glyphicon-fullscreen"></span> 全屏
+			</button>
+			<button class="btn btn-primary btn">
+  			<span class="glyphicon glyphicon-off"></span> 退出
+			</button>
+		
+    </div>
+	</article>
+  <div class="toolbar">
+   <a href="#" class="toolbar-item toolbar-item-weibo"></a>
+   <a href="#" class="toolbar-item toolbar-item-douban"></a>
+   <a href="" class="toolbar-item toolbar-item-feedback"></a>
+   <a href="javascript:;" class="toolbar-item toolbar-item-weixin"><span class="toolbar-layer"></span></a>
+   <a href="javascript:;" class="toolbar-item toolbar-item-app"><span class="toolbar-layer"></span></a>
+   <a href="javascript:scroll(0,0)" id="top" class="toolbar-item toolbar-item-top"></a>
+</div>
+		<!-- <div>
+		<div class="toolbar">
+		<a class="phone">	</a>
+		</div>
+		<div id="skirts">
+			<span class="phone">在线咨询</span>
+		</div> -->
+		</div>
+<!-- 内容输入 到footer中 -->
+	<footer> 
+	<iframe width="100%" height="100%" name="main" src="eachturn.html">
+	</iframe> 
+	</footer>
+	<!--内容属性  -->
+	<script type="text/javascript">
+/* 整体框架 */
+$("body").css({"background-color":"#333","width":"80%","margin":"0 auto","overflow":"hidden"});
+$("header").css({"width":"14%","height":"1000px","background-color":"rgb(57,61,73)","float":"left","position":"relative"});
+$("footer").css({"width":"80%","height":"900px","background-color":"white","float":"left"});
+/* 上框架的具体内容 */
+$("article>input[type='button']").css({"margin":"5px 10px","width":"40px","height":"30px","background-color":"gray","padding":"5px","border":"0"});
+$("article>div:first").css({"color":"black","float":"right" ,"margin":"5px 10px"});
+$("article>div:first>button").css({"width":"65px","height":"30px","cellpadding":"5px"});
+</script>
+<!--功能 方法 -->
+<script type="text/javascript">
+	$(function(){
+		
+		$(".list>li>ul").hide();//初始隐藏序列
+		$(".list>li").click(function(){//点击出现系列
+			$(this).children().show();
+			$(this).siblings().children().hide();	
+			$(".list>li>span").show();
+		})
+		$(".list>li>ul>li>a").click(function() {//图标不隐藏
+				$(".glyphicon-play").remove();
+				var h = $("<span class='glyphicon glyphicon-play'></span>");
+				$(this).prepend(h);
+				$(".list>li>ul").show();
+			})
+	
+	})
+</script>
+</body>
+
+</html>

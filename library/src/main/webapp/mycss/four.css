@@ -1,0 +1,73 @@
+@charset "UTF-8";
+body {
+    font-family: "宋体",Arial, Helvetica, sans-serif;
+}
+footer>div {
+  background-color: white;
+  padding: 7.5px;
+  margin: 7.5px;
+  color: #000;
+}
+
+.way {
+  border-radius: 5px;
+  width: 200px;
+  box-shadow: 0 0 5px #ccc;
+   margin: 5px auto;   
+  position: relative;
+ height: 40px;
+}
+.way:after{
+  content:"";
+  width: 14px;
+  height: 8px;
+  background:url("../imgs/箭头 (1).png") no-repeat center ;
+  position:absolute;
+  right: 20px;
+  top: 45%; 
+  pointer-events: none;
+}
+select {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-left: 45px;
+  
+  background:white;
+}
+
+#waybutton {
+  margin: 50px auto;
+  width: 100%;
+}
+
+#waybutton div {
+  text-align: center;
+}
+
+#waybutton input {
+  width: 80%;
+  margin: 5px 25px;
+ border-bottom:1px;
+}
+
+#true {
+  width: 100%;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.btn-success {
+  width: 30%;
+}
+
+#page {
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+}

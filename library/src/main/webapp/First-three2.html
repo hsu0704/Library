@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+<script type="text/javascript" src="bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="bootstrap3/js/respond.min.js"></script>
+</head>
+<!-- 内容输入 到footer中 -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <ul class="nav nav-tabs">
+        <li role="presentation" class="bg-info"><a href="#">当前借阅</a></li>
+        <li role="presentation" class="bg-info"><a href="#">借阅历史</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+  <div class="container bg-info">
+    <div class="row">
+      <table class="table table-hover ">
+        <thead>
+          <tr>
+            <td colspan="3"><div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">书本名字：</span>
+                <input type="text" class="form-control" aria-label="...">
+                <div class="input-group-btn">
+                  <button type="button"
+                    class="btn btn-default dropdown-toggle"
+                    data-toggle="dropdown" aria-expanded="false">
+                    搜索<span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-right"
+                    role="menu">
+                    <li><a href="#">加油噢</a></li>
+                    <li><a href="#">妹妹美</a></li>
+                    <li><a href="#">净瓶梅</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">全局搜索</a></li>
+                  </ul>
+                </div>
+              </div></td>
+
+            <td colspan="3"><div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">责任人：</span>
+                <input type="text" class="form-control" aria-label="...">
+                <div class="input-group-btn">
+                  <button type="button"
+                    class="btn btn-default dropdown-toggle"
+                    data-toggle="dropdown" aria-expanded="false">
+                    搜索<span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-right"
+                    role="menu">
+                    <li><a href="#">许某某</a></li>
+                    <li><a href="#">孙某某</a></li>
+                    <li><a href="#">林某某</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">全局搜索</a></li>
+                  </ul>
+                </div>
+              </div></td>
+          </tr>
+          <th>条码号</th>
+          <th>题名</th>
+          <th>责任人</th>
+          <th>借阅时间</th>
+          <th>应归还日期</th>
+          <th>馆藏地</th>
+          <th>附件</th>
+          <th>续借</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1588516</td>
+            <td>快乐颂</td>
+            <td>孙某末</td>
+            <td>2019-4-07 12:30:21</td>
+            <td>2019-4-14 12:30:21</td>
+            <td>生活类</td>
+            <td>无</td>
+            <td><button type="button" class="btn btn-info">续借</button></td>
+          </tr>
+          <tr>
+            <td>1588516</td>
+            <td>快乐颂</td>
+            <td>孙某末</td>
+            <td>2019-4-07 12:30:21</td>
+            <td>2019-4-14 12:30:21</td>
+            <td>生活类</td>
+            <td>无</td>
+            <td><button type="button" class="btn  btn-warning">续借</button></td>
+          </tr>
+          <tr>
+            <td>1588516</td>
+            <td>快乐颂</td>
+            <td>孙某末</td>
+            <td>2019-4-07 12:30:21</td>
+            <td>2019-4-14 12:30:21</td>
+            <td>生活类</td>
+            <td>无</td>
+            <td><button type="button" class="btn  btn-danger">续借</button></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+
+
+    </div>
+  </div>
+
+
+</footer>
+<!--内容属性  -->
+<script type="text/javascript">
+	/*footer内容  */
+</script>
+
+<!--功能 方法 -->
+<script type="text/javascript">
+	$(function() {
+		$("footer>div:first a").click(function() {
+			$(this).attr("class", "active")
+			$(this).siblings().attr("class", "")
+
+		})
+	})
+</script>
+</body>
+</html>
